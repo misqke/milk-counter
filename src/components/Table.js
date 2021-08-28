@@ -42,8 +42,8 @@ const MakeRow = (props) => {
     return (
         <tr className={props.color}>
             <td className="milk-name">{props.name}</td>
-            <td><input type="number" value={shelfVal} onFocus={ ()=> {FixShelf(''); updateTotal()}} onChange={ e => {updateShelf(e); updateTotal()}} /></td>
-            <td><input type="number" value={cratesVal} onFocus={ () => {FixCrates(''); updateTotal()}} onChange={ e => {updateCrates(e); updateTotal()}} /></td>
+            <td><input type="text" pattern="[0-9]*" value={shelfVal} onFocus={ ()=> {FixShelf(''); updateTotal()}} onChange={ e => {updateShelf(e); updateTotal()}} /></td>
+            <td><input type="text" pattern="[0-9]*" value={cratesVal} onFocus={ () => {FixCrates(''); updateTotal()}} onChange={ e => {updateCrates(e); updateTotal()}} /></td>
             <td>{total}</td>
         </tr>
     )
