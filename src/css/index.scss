@@ -40,21 +40,27 @@ $orange: #f69300;
   border: 5px solid #000;
   border-radius: 15px;
 }
+#t-header {
+  color: #ddd;
+  text-shadow: 0 0 10px #999;
+  background-color: #000;
+  height: 50px;
+}
 table {
   padding: 20px 20px 40px 20px;
   background-color: rgb(49, 43, 43);
   color: #fff;
   border-radius: 10px;
-  th {
-    padding-bottom: 10px;
-    color: #ddd;
-    text-shadow: 0 0 10px #999;
-  }
 }
 .milk-name {
   padding: 5px 10px;
 }
-tr input {
+.total {
+  width: 50px;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.35) inset;
+  text-shadow: 0 0 5px #ddd;
+}
+.input {
   width: 75px;
   height: 50px;
   text-align: center;
@@ -69,41 +75,42 @@ tr input {
 }
 
 .red {
-  background: linear-gradient(45deg, $red, $red, #000);
+  background-color: $red;
 }
 .blue {
-  background: linear-gradient(45deg, $blue, $blue, #000);
+  background-color: $blue;
 }
 .yellow {
-  background: linear-gradient(45deg, $yellow, $yellow, #000);
+  background-color: $yellow;
 }
 .lblue {
-  background: linear-gradient(45deg, $lblue, $lblue, #000);
+  background-color: $lblue;
 }
 .brown {
-  background: linear-gradient(45deg, $brown, $brown, #000);
+  background-color: $brown;
 }
 .lbrown {
-  background: linear-gradient(45deg, $lbrown, $lbrown, #000);
+  background-color: $lbrown;
 }
 .green {
-  background: linear-gradient(45deg, $green, $green, #000);
+  background-color: $green;
 }
 .tea {
-  background: linear-gradient(45deg, $tea, $tea, #000);
+  background-color: $tea;
 }
 .orange {
-  background: linear-gradient(45deg, $orange, $orange, #000);
+  background-color: $orange;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 425px) {
   .table-container {
     font-size: 22px;
   }
-  tr input {
+  .input {
     font-size: 24px;
-    width: 45px;
-    height: 40px;
+    width: 65px;
+    height: 50px;
+    margin: 5px 5px;
   }
 }
 @media (max-width: 375px) {
@@ -113,28 +120,26 @@ tr input {
   table {
     padding: 10px;
   }
-  tr input {
+  .input {
     font-size: 20px;
-    width: 40px;
-    height: 35px;
-    margin: 5px;
+    width: 50px;
+    height: 40px;
     border: 3px solid #000;
     box-shadow: 0 0 15px 5px #000 inset;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 320px) {
   .table-container {
     font-size: 16px;
   }
   table {
-    padding: 7px;
+    padding: 5px;
   }
-  tr input {
+  .input {
     font-size: 18px;
-    width: 35px;
-    height: 30px;
-    margin: 5px;
-    border: 3px solid #000;
-    box-shadow: 0 0 15px 5px #000 inset;
+    width: 45px;
+    height: 40px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px 5px #000 inset;
   }
 }

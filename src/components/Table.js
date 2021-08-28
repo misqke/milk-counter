@@ -42,9 +42,9 @@ const MakeRow = (props) => {
     return (
         <tr key={props.name} className={props.color}>
             <td className="milk-name">{props.name}</td>
-            <td><input type="text" pattern="[0-9]*" value={shelfVal} onFocus={ () => FixShelf('')} onChange={ e => {updateShelf(e)}} /></td>
-            <td><input type="text" pattern="[0-9]*" value={cratesVal} onFocus={ () => FixCrates('')} onChange={ e => {updateCrates(e)}} /></td>
-            <td>{total}</td>
+            <td><input class='input' type="text" pattern="[0-9]*" value={shelfVal} onFocus={ () => FixShelf('')} onChange={ e => {updateShelf(e)}} /></td>
+            <td><input class='input' type="text" pattern="[0-9]*" value={cratesVal} onFocus={ () => FixCrates('')} onChange={ e => {updateCrates(e)}} /></td>
+            <td className="total">{total}</td>
         </tr>
     )
 } 
@@ -57,7 +57,7 @@ export default function Table() {
         <div className="table-container">
             <table>
                 <tbody>
-                    <tr>
+                <tr id='t-header'>
                         <th>Milk</th>
                         <th>Shelf</th>
                         <th>Crates</th>

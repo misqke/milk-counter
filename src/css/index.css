@@ -52,6 +52,13 @@
   border-radius: 15px;
 }
 
+#t-header {
+  color: #ddd;
+  text-shadow: 0 0 10px #999;
+  background-color: #000;
+  height: 50px;
+}
+
 table {
   padding: 20px 20px 40px 20px;
   background-color: #312b2b;
@@ -59,17 +66,18 @@ table {
   border-radius: 10px;
 }
 
-table th {
-  padding-bottom: 10px;
-  color: #ddd;
-  text-shadow: 0 0 10px #999;
-}
-
 .milk-name {
   padding: 5px 10px;
 }
 
-tr input {
+.total {
+  width: 50px;
+  -webkit-box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.35) inset;
+          box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.35) inset;
+  text-shadow: 0 0 5px #ddd;
+}
+
+.input {
   width: 75px;
   height: 50px;
   text-align: center;
@@ -85,49 +93,50 @@ tr input {
 }
 
 .red {
-  background: linear-gradient(45deg, #f00, #f00, #000);
+  background-color: #f00;
 }
 
 .blue {
-  background: linear-gradient(45deg, #00c, #00c, #000);
+  background-color: #00c;
 }
 
 .yellow {
-  background: linear-gradient(45deg, #ee0, #ee0, #000);
+  background-color: #ee0;
 }
 
 .lblue {
-  background: linear-gradient(45deg, #6969ff, #6969ff, #000);
+  background-color: #6969ff;
 }
 
 .brown {
-  background: linear-gradient(45deg, #64330b, #64330b, #000);
+  background-color: #64330b;
 }
 
 .lbrown {
-  background: linear-gradient(45deg, #c76414, #c76414, #000);
+  background-color: #c76414;
 }
 
 .green {
-  background: linear-gradient(45deg, #0a0, #0a0, #000);
+  background-color: #0a0;
 }
 
 .tea {
-  background: linear-gradient(45deg, #daa520, #daa520, #000);
+  background-color: #daa520;
 }
 
 .orange {
-  background: linear-gradient(45deg, #f69300, #f69300, #000);
+  background-color: #f69300;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 425px) {
   .table-container {
     font-size: 22px;
   }
-  tr input {
+  .input {
     font-size: 24px;
-    width: 45px;
-    height: 40px;
+    width: 65px;
+    height: 50px;
+    margin: 5px 5px;
   }
 }
 
@@ -138,32 +147,30 @@ tr input {
   table {
     padding: 10px;
   }
-  tr input {
+  .input {
     font-size: 20px;
-    width: 40px;
-    height: 35px;
-    margin: 5px;
+    width: 50px;
+    height: 40px;
     border: 3px solid #000;
     -webkit-box-shadow: 0 0 15px 5px #000 inset;
             box-shadow: 0 0 15px 5px #000 inset;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 320px) {
   .table-container {
     font-size: 16px;
   }
   table {
-    padding: 7px;
+    padding: 5px;
   }
-  tr input {
+  .input {
     font-size: 18px;
-    width: 35px;
-    height: 30px;
-    margin: 5px;
-    border: 3px solid #000;
-    -webkit-box-shadow: 0 0 15px 5px #000 inset;
-            box-shadow: 0 0 15px 5px #000 inset;
+    width: 45px;
+    height: 40px;
+    border: 1px solid #000;
+    -webkit-box-shadow: 0 0 10px 5px #000 inset;
+            box-shadow: 0 0 10px 5px #000 inset;
   }
 }
 /*# sourceMappingURL=index.css.map */
