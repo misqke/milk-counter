@@ -20,12 +20,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #384764;
+  font-family: monospace;
 }
 
 #header {
   margin: 15px auto;
-  color: #aaa;
-  text-shadow: 0 0 10px #999;
+  color: #070707;
+  text-shadow: 0 0 10px #fff;
+  letter-spacing: 1px;
 }
 
 .table-container {
@@ -45,14 +47,22 @@
   text-align: center;
   font-size: 26px;
   font-weight: 500;
-  text-shadow: 0 0 15px #000;
+  text-shadow: 0 0 15px #050505;
+  border: 5px solid #000;
+  border-radius: 15px;
 }
 
 table {
-  padding: 20px;
-  background-color: #000;
+  padding: 20px 20px 40px 20px;
+  background-color: #312b2b;
   color: #fff;
   border-radius: 10px;
+}
+
+table th {
+  padding-bottom: 10px;
+  color: #ddd;
+  text-shadow: 0 0 10px #999;
 }
 
 .milk-name {
@@ -67,44 +77,47 @@ tr input {
   border-radius: 10px;
   font-size: 28px;
   background-color: #384764;
-  color: #aaa;
+  color: #ddd;
   text-shadow: 0 0 10px #999;
+  border: 3px solid #000;
+  -webkit-box-shadow: 0 0 20px 10px #000 inset;
+          box-shadow: 0 0 20px 10px #000 inset;
 }
 
 .red {
-  background-color: #f00;
+  background: linear-gradient(45deg, #f00, #f00, #000);
 }
 
 .blue {
-  background-color: #00c;
+  background: linear-gradient(45deg, #00c, #00c, #000);
 }
 
 .yellow {
-  background-color: #ee0;
+  background: linear-gradient(45deg, #ee0, #ee0, #000);
 }
 
 .lblue {
-  background-color: #6969ff;
+  background: linear-gradient(45deg, #6969ff, #6969ff, #000);
 }
 
 .brown {
-  background-color: #64330b;
+  background: linear-gradient(45deg, #64330b, #64330b, #000);
 }
 
 .lbrown {
-  background-color: #c76414;
+  background: linear-gradient(45deg, #c76414, #c76414, #000);
 }
 
 .green {
-  background-color: #0a0;
+  background: linear-gradient(45deg, #0a0, #0a0, #000);
 }
 
 .tea {
-  background-color: #daa520;
+  background: linear-gradient(45deg, #daa520, #daa520, #000);
 }
 
 .orange {
-  background-color: #f69300;
+  background: linear-gradient(45deg, #f69300, #f69300, #000);
 }
 
 @media (max-width: 450px) {
@@ -118,7 +131,7 @@ tr input {
   }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 375px) {
   .table-container {
     font-size: 18px;
   }
@@ -130,6 +143,27 @@ tr input {
     width: 40px;
     height: 35px;
     margin: 5px;
+    border: 3px solid #000;
+    -webkit-box-shadow: 0 0 15px 5px #000 inset;
+            box-shadow: 0 0 15px 5px #000 inset;
+  }
+}
+
+@media (max-width: 300px) {
+  .table-container {
+    font-size: 16px;
+  }
+  table {
+    padding: 7px;
+  }
+  tr input {
+    font-size: 18px;
+    width: 35px;
+    height: 30px;
+    margin: 5px;
+    border: 3px solid #000;
+    -webkit-box-shadow: 0 0 15px 5px #000 inset;
+            box-shadow: 0 0 15px 5px #000 inset;
   }
 }
 /*# sourceMappingURL=index.css.map */

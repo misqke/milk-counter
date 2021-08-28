@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const MakeRow = (props) => {
-    const [shelfVal, FixShelf] = useState();
-    const [cratesVal, FixCrates] = useState();
+    const [shelfVal, FixShelf] = useState(0);
+    const [cratesVal, FixCrates] = useState(0);
     const [total, FixTotal] = useState(0);
     const multiplier = props.num;
 
@@ -40,16 +40,16 @@ const MakeRow = (props) => {
     });
 
     return (
-        <tr className={props.color}>
+        <tr key={props.name} className={props.color}>
             <td className="milk-name">{props.name}</td>
-            <td><input type="text" pattern="[0-9]*" value={shelfVal} onFocus={ ()=> {FixShelf(''); updateTotal()}} onChange={ e => {updateShelf(e); updateTotal()}} /></td>
-            <td><input type="text" pattern="[0-9]*" value={cratesVal} onFocus={ () => {FixCrates(''); updateTotal()}} onChange={ e => {updateCrates(e); updateTotal()}} /></td>
+            <td><input type="text" pattern="[0-9]*" value={shelfVal} onFocus={ () => FixShelf('')} onChange={ e => {updateShelf(e)}} /></td>
+            <td><input type="text" pattern="[0-9]*" value={cratesVal} onFocus={ () => FixCrates('')} onChange={ e => {updateCrates(e)}} /></td>
             <td>{total}</td>
         </tr>
     )
 } 
 
-const milkArr = [['gal homo', 4, 'red'], ['gal 2%', 4, 'blue'], ['gal 1%', 4, 'yellow'], ['gal skim', 4, 'lblue'], ['hgl homo', 9, 'red'], ['hgl 2%', 9, 'blue'], ['hgl 1%', 9, 'yellow'], ['hgl skim', 9, 'lblue'], ['qt homo', 16, 'red'], ['qt 2%', 16, 'blue'], ['qt 1%', 16, 'yellow'], ['qt skim', 16, 'lblue'], ['gal choc', 4, 'brown'], ['gal choc 1%', 4, 'lbrown'], ['hgl choc 1%', 9, 'lbrown'], ['hgl choc', 9, 'brown'], ['hgl butter', 9, 'green'], ['qt butter 1%', 16, 'green'], ['qt choc 1%', 16, 'lbrown'], ['qt choc', 16, 'brown'], ['14oz homo', 16, 'red'], ['14oz 2%', 16, 'blue'], ['14oz choc 1%', 16, 'lbrown'], ['14oz choc', 16, 'brown'], ['qt whp crm', 16, 'tea'], ['lemon tea', 4, 'tea'], ['lemonade', 4, 'tea'], ['green tea', 4, 'tea'], ['tea cooler', 4, 'tea'], ['diet lemon', 4, 'tea'], ['diet peach', 4, 'tea'], ['diet decaf', 4, 'tea'], ['sweet tea', 4, 'tea'], ['diet green', 4, 'tea'], ['peach tea', 4, 'tea'], ['diet sweet', 4, 'tea'], ['rasp lemon', 4, 'tea'], ['rasp tea', 4, 'tea'], ['pt iced', 16, 'tea'], ['pt diet lemon', 16, 'tea'], ['pt peach', 16, 'tea'], ['pt sweet tea', 16, 'tea'], ['gal frt punch', 4, 'red'], ['gal org drink', 4, 'orange'], ['gal orange juice', 4, 'orange'], ['gal cal oj', 4, 'orange'], ['hgl orange juice', 16, 'orange'], ['hgl cal oj', 16, 'orange'], ['pt orange juice', 4, 'orange']];
+const milkArr = [['gal homo', 4, 'red'], ['gal 2%', 4, 'blue'], ['gal 1%', 4, 'yellow'], ['gal skim', 4, 'lblue'], ['hgl homo', 9, 'red'], ['hgl 2%', 9, 'blue'], ['hgl 1%', 9, 'yellow'], ['hgl skim', 9, 'lblue'], ['qt homo', 16, 'red'], ['qt 2%', 16, 'blue'], ['qt 1%', 16, 'yellow'], ['qt skim', 16, 'lblue'], ['gal choc', 4, 'brown'], ['gal choc 1%', 4, 'lbrown'], ['hgl choc 1%', 9, 'lbrown'], ['hgl choc', 9, 'brown'], ['hgl butter', 9, 'green'], ['qt butter 1%', 16, 'green'], ['qt choc 1%', 16, 'lbrown'], ['qt choc', 16, 'brown'], ['14oz homo', 20, 'red'], ['14oz 2%', 20, 'blue'], ['14oz choc 1%', 20, 'lbrown'], ['14oz choc', 20, 'brown'], ['qt whp crm', 20, 'tea'], ['lemon tea', 4, 'tea'], ['lemonade', 4, 'tea'], ['green tea', 4, 'tea'], ['tea cooler', 4, 'tea'], ['diet lemon', 4, 'tea'], ['diet peach', 4, 'tea'], ['diet decaf', 4, 'tea'], ['sweet tea', 4, 'tea'], ['diet green', 4, 'tea'], ['peach tea', 4, 'tea'], ['diet sweet', 4, 'tea'], ['rasp lemon', 4, 'tea'], ['rasp tea', 4, 'tea'], ['pt iced', 20, 'tea'], ['pt diet lemon', 20, 'tea'], ['pt peach', 20, 'tea'], ['pt sweet tea', 20, 'tea'], ['gal frt punch', 4, 'red'], ['gal org drink', 4, 'orange'], ['gal orange juice', 4, 'orange'], ['gal cal oj', 4, 'orange'], ['hgl orange juice', 16, 'orange'], ['hgl cal oj', 16, 'orange'], ['pt orange juice', 20, 'orange']];
 
 
 export default function Table() {
