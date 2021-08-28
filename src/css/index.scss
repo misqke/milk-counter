@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+$red: #f00;
+$blue: #00c;
+$yellow: #ee0;
+$lblue: #6969ff;
+$brown: #64330b;
+$lbrown: #c76414;
+$green: #0a0;
+$tea: #daa520;
+$orange: #f69300;
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.App {
+  @include flexCenter(column);
+  background-color: #384764;
+}
+#header {
+  margin: 15px auto;
+  color: #aaa;
+  text-shadow: 0 0 10px #999;
+}
+.table-container {
+  @include flexCenter(column);
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  text-shadow: 0 0 15px #000;
+}
+table {
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+
+  border-radius: 10px;
+}
+.milk-name {
+  padding: 5px 10px;
+}
+tr input {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  margin: 5px 10px;
+  border-radius: 10px;
+  font-size: 28px;
+  background-color: #384764;
+  color: #aaa;
+  text-shadow: 0 0 10px #999;
+}
+
+.red {
+  background-color: $red;
+}
+.blue {
+  background-color: $blue;
+}
+.yellow {
+  background-color: $yellow;
+}
+.lblue {
+  background-color: $lblue;
+}
+.brown {
+  background-color: $brown;
+}
+.lbrown {
+  background-color: $lbrown;
+}
+.green {
+  background-color: $green;
+}
+.tea {
+  background-color: $tea;
+}
+.orange {
+  background-color: $orange;
+}
+
+@media (max-width: 450px) {
+  .table-container {
+    font-size: 22px;
+  }
+  tr input {
+    font-size: 24px;
+    width: 45px;
+    height: 40px;
+  }
+}
+@media (max-width: 325px) {
+  .table-container {
+    font-size: 18px;
+  }
+  table {
+    padding: 10px;
+  }
+  tr input {
+    font-size: 20px;
+    width: 40px;
+    height: 35px;
+    margin: 5px;
+  }
+}
