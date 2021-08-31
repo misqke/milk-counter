@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/milk-counter/static/css/main.7d265253.chunk.css",
-    "main.js": "/milk-counter/static/js/main.1dcc7f89.chunk.js",
-    "main.js.map": "/milk-counter/static/js/main.1dcc7f89.chunk.js.map",
+    "main.css": "/milk-counter/static/css/main.fc6939dc.chunk.css",
+    "main.js": "/milk-counter/static/js/main.4a7db2fa.chunk.js",
+    "main.js.map": "/milk-counter/static/js/main.4a7db2fa.chunk.js.map",
     "runtime-main.js": "/milk-counter/static/js/runtime-main.f1829118.js",
     "runtime-main.js.map": "/milk-counter/static/js/runtime-main.f1829118.js.map",
     "static/js/2.22270452.chunk.js": "/milk-counter/static/js/2.22270452.chunk.js",
     "static/js/2.22270452.chunk.js.map": "/milk-counter/static/js/2.22270452.chunk.js.map",
     "index.html": "/milk-counter/index.html",
-    "static/css/main.7d265253.chunk.css.map": "/milk-counter/static/css/main.7d265253.chunk.css.map",
+    "static/css/main.fc6939dc.chunk.css.map": "/milk-counter/static/css/main.fc6939dc.chunk.css.map",
     "static/js/2.22270452.chunk.js.LICENSE.txt": "/milk-counter/static/js/2.22270452.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f1829118.js",
     "static/js/2.22270452.chunk.js",
-    "static/css/main.7d265253.chunk.css",
-    "static/js/main.1dcc7f89.chunk.js"
+    "static/css/main.fc6939dc.chunk.css",
+    "static/js/main.4a7db2fa.chunk.js"
   ]
 }
