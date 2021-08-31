@@ -1,25 +1,22 @@
 import { useState, useEffect } from 'react';
 
 const MakeRow = (props) => {
-    const [shelfVal, FixShelf] = useState(0);
-    const [cratesVal, FixCrates] = useState(0);
     const [total, FixTotal] = useState(0);
     const multiplier = props.num;
-
-    
+    const [shelfVal, FixShelf] = useState(0);
+    const [cratesVal, FixCrates] = useState(0);
 
     const updateTotal = () => {
         if (cratesVal && shelfVal) {
-            FixTotal((cratesVal*multiplier) + (shelfVal));
+            FixTotal(Math.floor((cratesVal*multiplier) + (shelfVal)));
         } else if (shelfVal) {
-            FixTotal(shelfVal);
+            FixTotal(Math.floor(shelfVal));
         } else if (cratesVal) {
-            FixTotal(cratesVal*multiplier);
+            FixTotal(Math.floor(cratesVal*multiplier));
         } else {
             FixTotal(0);
         }
-    }
-
+    };
     const updateShelf = (e) => {
         if (e.target.value) {
             FixShelf(parseInt(e.target.value));
@@ -29,21 +26,23 @@ const MakeRow = (props) => {
     }
     const updateCrates = (e) => {
         if (e.target.value) {
-            FixCrates(parseInt(e.target.value));
+            FixCrates(parseFloat(e.target.value));
         } else {
             FixCrates(0);
         }
       
     }
+
     useEffect(() => {
         updateTotal();
     });
+    
 
     return (
         <tr key={props.name} className={props.color}>
             <td className="milk-name">{props.name}</td>
-            <td><input class='input' type="text" pattern="[0-9]*" value={shelfVal} onFocus={ () => FixShelf('')} onChange={ e => {updateShelf(e)}} /></td>
-            <td><input class='input' type="text" pattern="[0-9]*" value={cratesVal} onFocus={ () => FixCrates('')} onChange={ e => {updateCrates(e)}} /></td>
+            <td><input class='input' type="number" min='0' inputMode='decimal' value={shelfVal} onFocus={ () => FixShelf('')} onChange={ e => {updateShelf(e)}} /></td>
+            <td><input class='input' type="number" min='0' inputMode='decimal' value={cratesVal} onFocus={ () => FixCrates('')} onChange={ e => {updateCrates(e)}} /></td>
             <td className="total">{total}</td>
         </tr>
     )
@@ -57,7 +56,7 @@ export default function Table() {
         <div className="table-container">
             <table>
                 <tbody>
-                <tr id='t-header'>
+                <tr className='t-header'>
                         <th>Milk</th>
                         <th>Shelf</th>
                         <th>Crates</th>
