@@ -104,6 +104,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 500;
   text-shadow: 0 0 15px #050505;
   margin-bottom: 30px;
+  max-width: 95%;
 }
 
 #orderer-container {
@@ -113,13 +114,9 @@ input[type="number"]::-webkit-outer-spin-button {
           justify-content: flex-start;
 }
 
-#orderer-container p {
+#orderer-container tfoot {
   font-size: 12px;
   color: #ddd;
-  margin-top: 5px;
-  margin-left: 10px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 
 .t-header {
@@ -130,7 +127,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 table {
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   background-color: #312b2b;
   color: #fff;
   border-radius: 10px;
@@ -202,7 +199,7 @@ table {
   background-color: #f69300;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .table-container {
     font-size: 22px;
   }
@@ -214,7 +211,7 @@ table {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 395px) {
   .table-container {
     font-size: 18px;
   }
