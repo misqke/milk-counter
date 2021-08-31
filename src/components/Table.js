@@ -21,14 +21,14 @@ const MakeRow = (props) => {
         if (e.target.value) {
             FixShelf(parseInt(e.target.value));
         } else {
-            FixShelf(0);
+            FixShelf('');
         } 
     }
     const updateCrates = (e) => {
         if (e.target.value) {
             FixCrates(parseFloat(e.target.value));
         } else {
-            FixCrates(0);
+            FixCrates('');
         }
       
     }

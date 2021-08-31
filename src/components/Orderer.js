@@ -12,14 +12,14 @@ const Row = (props) => {
         if (e.target.value) {
         fixCrates(parseFloat(e.target.value));
         } else {
-            fixCrates(0);
+            fixCrates('');
         }
     }
     const handleStacks = (e) => {
         if (e.target.value) {
         fixStacks(parseFloat(e.target.value));
         } else {
-            fixCrates(0);
+            fixStacks('');
         }
     }
     const handleOrder = () => {
