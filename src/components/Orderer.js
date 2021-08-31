@@ -63,6 +63,7 @@ export default function Orderer() {
                 </tr>
                 {sizeArr.map((size) => Row({'name':size[0], 'num':size[1]}))}
             </table>
+            <p>*Stacks are 6 crates</p>
         </div>
     )
 }
